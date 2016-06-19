@@ -4,7 +4,7 @@ app.directive('pages', function() {
     scope: {
       page: '=info'
     },
-    template: '<h1> {{ page.description }} </h1>'
+    template: '<h2> {{ page.description }} </h2>'
   };
 });
 
