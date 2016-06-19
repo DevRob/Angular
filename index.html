@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8">
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/main.css" rel="stylesheet" />
+    <link id="css" href="css/main.css" rel="stylesheet" />
     <script src="js/vendor/angular.min.js"></script>
     <title>Portfolio</title>
   </head>
   <body ng-app="portfolio">
     <div class="main container" ng-controller="MainController">
-
-      <li ng-repeat="page in pages" ng-click="showPage($index)"> {{ page.title }} </li>
+      <button type="button" name="button" onclick="swapCss()">Change CSS</button>
+      <ul class='circle-container'>
+        <li ng-repeat="page in pages" ng-click="showPage($index)"> {{ page.title }} </li>
+      </ul>
 
       <div class="description">
           <pages info="actualPage"></pages>
@@ -32,3 +34,23 @@
     <script src="js/directives/directives.js"></script>
   </body>
 </html>
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<em>Emphasized text</em><br>
+<strong>Strong text</strong><br>
+<div style="background-color: black; color: grey">
+<code><br>
+&emsp;function = foo() {<br>
+&emsp;&emsp;&emsp;//do your stuff here...<br>
+&emsp;}<br>
+</code><br>
+</div>
+<samp>Sample output from a computer program</samp><br>
+<kbd>Keyboard input</kbd><br>
+<var>Variable</var>
+
+</body>
+</html> -->

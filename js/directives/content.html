@@ -1,9 +1,9 @@
-<h2> {{ content.header }} </h2>
+<h3> {{ content.header }} </h3>
 <article class="content">
   <p>
     {{ content.article }}
   </p>
 </article>
 <div class="content-images" ng-repeat="image in content.images">
-  <img ng-src="{{ image }}" alt="{{ $index }}th image"/>
+  <img class="img-responsive" ng-src="{{ image }}" alt="image no.:{{ $index }}"/>
 </div>
