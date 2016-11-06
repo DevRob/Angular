@@ -1,19 +1,22 @@
 var Data = function() {
   this.pages = [
     {
-      "title": "Home Page",
-      "description": "I'm building this site to showcase my skills. It's work in progress and it will always be, " +
-      "since I will never stop learning.",
+      "title": "Me",
+      "description":  "Software Developer experienced with object-oriented and functional programming languages. \
+                      Experienced with server and client side application using HTML, CSS, Javascript, .NET, MySQL. \
+                      Familiar with Responsive Web Design techniques, Google Maps API, JQuery and data-binding with \
+                      knockout.js. Highly value re-usable, maintenable, self-documenting code. Fast learner and open \
+                      to using new technologies and frameworks.",
       "contents": [
         {
           "header": "The idea.",
-          "article": "I use this site as a portfolio for now, but it will always change and grow " +
-          "( hopefully! ) as I pick up new techniques and technologies. The page is very simple, " +
+          "article": "I use this site as a portfolio for now, but it will always change and grow \
+          ( hopefully! ) as I pick up new techniques and technologies. The page is very simple, " +
           "I list my skills and you can navigate to the part you are interested in. I try to infuse " +
           " all these skills listed into this site and show some other cases I used them before.",
           "images": [
             "img/web-blue.jpg",
-            "http://media.gettyimages.com/photos/red-bellied-woodpecker-perched-on-tree-branch-picture-id516071369"
+            ""
           ]
         },
         {
@@ -21,8 +24,8 @@ var Data = function() {
           "article": "I've just started this project and most of the content are just random toughts and images." +
           "This page use AngularJS to display the content of an array of objects",
           "images": [
-            "http://media.gettyimages.com/photos/great-spotted-woodpecker-picture-id144911245",
-            "http://media.gettyimages.com/photos/laced-woodpecker-picture-id159408057"
+            "",
+            ""
           ]
         }
       ]
