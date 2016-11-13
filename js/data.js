@@ -2,11 +2,11 @@ var Data = function() {
   this.pages = [
     {
       "title": "home",
-      "description":  "",
+      "description":  "This site nowhere near to finished. The content is a collection of completely random thoughts.",
       "contents": [
         {
           "header": "The idea.",
-          "article": "I use this site as a portfolio for now, but it will always change and grow \
+          "article": "I will use this site as a portfolio for now, but it will always change and grow \
           ( hopefully! ) as I pick up new techniques and technologies. The page is very simple, " +
           "I list my skills and you can navigate to the part you are interested in. I try to infuse " +
           " all these skills listed into this site and show some other cases I used them before.",
