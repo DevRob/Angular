@@ -3,7 +3,8 @@ app.controller('MainController', ['$scope', function($scope) {
   $scope.pages = data.pages;
   $scope.actualPage = $scope.pages[0];
 
-  $scope.showPage = function page(index) {
-    $scope.actualPage = $scope.pages[index];;
+  $scope.showPage = function(index) {
+    $scope.actualPage = $scope.pages[index];
   };
+
 }])

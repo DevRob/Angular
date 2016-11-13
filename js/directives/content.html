@@ -4,6 +4,6 @@
     {{ content.article }}
   </p>
 </article>
-<div class="content-images" ng-repeat="image in content.images">
+<div class="content-images" ng-repeat="image in content.images track by $index">
   <img class="img-responsive" ng-src="{{ image }}" alt="image no.:{{ $index }}"/>
 </div>

@@ -1,12 +1,8 @@
 var Data = function() {
   this.pages = [
     {
-      "title": "Me",
-      "description":  "Software Developer experienced with object-oriented and functional programming languages. \
-                      Experienced with server and client side application using HTML, CSS, Javascript, .NET, MySQL. \
-                      Familiar with Responsive Web Design techniques, Google Maps API, JQuery and data-binding with \
-                      knockout.js. Highly value re-usable, maintenable, self-documenting code. Fast learner and open \
-                      to using new technologies and frameworks.",
+      "title": "home",
+      "description":  "",
       "contents": [
         {
           "header": "The idea.",
@@ -15,8 +11,8 @@ var Data = function() {
           "I list my skills and you can navigate to the part you are interested in. I try to infuse " +
           " all these skills listed into this site and show some other cases I used them before.",
           "images": [
-            "img/web-blue.jpg",
-            ""
+            "img/Asteroid2.png",
+            "img/Asteroid2.png"
           ]
         },
         {
@@ -24,8 +20,8 @@ var Data = function() {
           "article": "I've just started this project and most of the content are just random toughts and images." +
           "This page use AngularJS to display the content of an array of objects",
           "images": [
-            "",
-            ""
+            "img/Asteroid2.png",
+            "img/Asteroid2.png"
           ]
         }
       ]
