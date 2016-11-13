@@ -1,19 +1,18 @@
 var Data = function() {
   this.pages = [
     {
-      "title": "Home Page",
-      "description": "I'm building this site to showcase my skills. It's work in progress and it will always be, " +
-      "since I will never stop learning.",
+      "title": "home",
+      "description":  "This site nowhere near to finished. The content is a collection of completely random thoughts.",
       "contents": [
         {
           "header": "The idea.",
-          "article": "I use this site as a portfolio for now, but it will always change and grow " +
-          "( hopefully! ) as I pick up new techniques and technologies. The page is very simple, " +
+          "article": "I will use this site as a portfolio for now, but it will always change and grow \
+          ( hopefully! ) as I pick up new techniques and technologies. The page is very simple, " +
           "I list my skills and you can navigate to the part you are interested in. I try to infuse " +
           " all these skills listed into this site and show some other cases I used them before.",
           "images": [
-            "img/web-blue.jpg",
-            "http://media.gettyimages.com/photos/red-bellied-woodpecker-perched-on-tree-branch-picture-id516071369"
+            "img/Asteroid2.png",
+            "img/Asteroid2.png"
           ]
         },
         {
@@ -21,8 +20,8 @@ var Data = function() {
           "article": "I've just started this project and most of the content are just random toughts and images." +
           "This page use AngularJS to display the content of an array of objects",
           "images": [
-            "http://media.gettyimages.com/photos/great-spotted-woodpecker-picture-id144911245",
-            "http://media.gettyimages.com/photos/laced-woodpecker-picture-id159408057"
+            "img/Asteroid2.png",
+            "img/Asteroid2.png"
           ]
         }
       ]

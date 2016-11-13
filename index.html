@@ -8,19 +8,25 @@
     <title>Portfolio</title>
   </head>
   <body ng-app="portfolio">
-    <div class="main container" ng-controller="MainController">
-      <button type="button" name="button" onclick="swapCss()">Change CSS</button>
-      <ul class='circle-container'>
-        <li ng-repeat="page in pages" ng-click="showPage($index)"> {{ page.title }} </li>
-      </ul>
-
-      <div class="description">
-          <pages info="actualPage"></pages>
-          <div class="contents" ng-repeat="content in actualPage.contents">
-            <page-content content="content"></page-content>
-          </div>
+    <div class="container">
+      <div class="main controller" ng-controller="MainController">
+        <!--button type="button" name="button" onclick="swapCss()">Change CSS</button-->
+        <div class="row">
+          <menu class="buttons">
+            <ul class='menu-container'>
+              <li class="tab-btn" ng-repeat="page in pages" ng-click="showPage($index)"> {{ page.title }} </li>
+            </ul>
+          </menu>
+        </div>
+        <div class="row">
+          <section class="page-container">
+              <pages info="actualPage"></pages>
+              <article class="contents" ng-repeat="content in actualPage.contents">
+                <page-content content="content"></page-content>
+              </article>
+          </section>
+        </div>
       </div>
-
     </div>
     <script src="js/jquery-1.12.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -34,23 +40,3 @@
     <script src="js/directives/directives.js"></script>
   </body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html>
-<body>
-
-<em>Emphasized text</em><br>
-<strong>Strong text</strong><br>
-<div style="background-color: black; color: grey">
-<code><br>
-&emsp;function = foo() {<br>
-&emsp;&emsp;&emsp;//do your stuff here...<br>
-&emsp;}<br>
-</code><br>
-</div>
-<samp>Sample output from a computer program</samp><br>
-<kbd>Keyboard input</kbd><br>
-<var>Variable</var>
-
-</body>
-</html> -->
