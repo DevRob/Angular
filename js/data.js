@@ -18,7 +18,7 @@ var Data = function() {
         {
           "header": "Status of this Project.",
           "article": "I've just started this project and most of the content are just random toughts and images." +
-          "This page use AngularJS to display the content of an array of objects",
+          "This page uses AngularJS to display the content of an array of objects",
           "images": [
             "img/Asteroid2.png",
             "img/Asteroid2.png"

@@ -4,16 +4,20 @@
     <meta charset="utf-8">
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link id="css" href="css/main.css" rel="stylesheet" />
+    <link id="css" href="css/3Dtransform.css" rel="stylesheet" />
     <script src="js/vendor/angular.min.js"></script>
     <title>Portfolio</title>
   </head>
   <body ng-app="portfolio">
     <div class="container">
       <div class="main controller" ng-controller="MainController">
-        <!--button type="button" name="button" onclick="swapCss()">Change CSS</button-->
+        <p id="navigation">
+          <button id="previous" data-increment="-1">Previous</button>
+          <button id="next" data-increment="1">Next</button>
+        </p>
         <div class="row">
-          <menu class="buttons">
-            <ul class='menu-container'>
+          <menu class="menu-container">
+            <ul id="carousel">
               <li class="tab-btn" ng-repeat="page in pages" ng-click="showPage($index)"> {{ page.title }} </li>
             </ul>
           </menu>
@@ -38,5 +42,27 @@
     <script src="js/controllers/MainController.js"></script>
     <!-- Directives -->
     <script src="js/directives/directives.js"></script>
+    <script src="js/utils.js"></script>
+    <script type="text/javascript">
+      var init = function() {
+        var carousel = document.getElementById('carousel'),
+            navButtons = document.querySelectorAll('#navigation button'),
+            panelCount = carousel.children.length,
+            transformProp = Modernizr.prefixed('transform'),
+            theta = 0,
+
+            onNavButtonClick = function( event ){
+              var increment = parseInt( event.target.getAttribute('data-increment') );
+              theta += ( 360 / panelCount ) * increment * -1;
+              carousel.style[ transformProp ] = 'translateZ( -288px ) rotateY(' + theta + 'deg)';
+            };
+
+        for (var i=0; i < 2; i++) {
+          navButtons[i].addEventListener( 'click', onNavButtonClick, false);
+        }
+
+      };
+      window.addEventListener( 'DOMContentLoaded', init, false);
+    </script>
   </body>
 </html>
