@@ -7,12 +7,16 @@ body {
   color: var(--main-text-color);
 }
 
-.buttons {
-  padding-top: 20px;
-}
-
 ul {
   margin: auto;
+}
+
+menu {
+  padding: 0;
+}
+
+.buttons {
+  padding-top: 20px;
 }
 
 .menu-container li {

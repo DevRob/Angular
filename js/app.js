@@ -1,3 +1,4 @@
+Number.prototype.mod = function(n) { return ((this%n)+n)%n; };
 var app = angular.module("portfolio", []);
 
 function swapCss() {
@@ -5,19 +6,34 @@ function swapCss() {
 }
 
 $(document).ready(function(){
+  var panelCount = $("#carousel li").length,
+      halfway = parseInt(panelCount / 2),
+      transformProp = Modernizr.prefixed('transform'),
+      theta = 0;
+  $.each($("#carousel li"), function(index) {
+    $(this).attr("data-increment", (index + halfway).mod(panelCount) - halfway);
+  });
 
   $("li").hover(function(){
     $(this).css("background", "darkblue");
     }, function(){
-      if ($(this).attr("class") !== "active") {
-        $(this).css("background-color", "blue");
+      if ($(this).attr("data-increment") !== "0") {
+        $(this).css("background", "hsla( 240, 100%, 50%, 0.8 )");
       }
     }
   );
 
   $("li").click(function() {
-    $("#carousel").children().attr("class", "tab-btn ng-binding ng-scope").css("background-color", "blue");
-    $(this).attr("class", "active").css("background-color", "darkblue");
-  });
+    var clickedIndex = $("#carousel li").index( this );
 
+    theta += ( 360 / panelCount ) * $(this).attr("data-increment") * -1;
+    carousel.style[ transformProp ] = 'translateZ( -288px ) rotateY(' + theta + 'deg)';
+
+    $("#carousel").children().attr("class", "tab-btn ng-binding ng-scope").css("background", "hsla( 240, 100%, 50%, 0.8 )");
+    $(this).css("background-color", "darkblue");
+
+    $.each($("#carousel li"), function(index) {
+      $(this).attr("data-increment", (index - clickedIndex + halfway).mod(panelCount) - halfway);
+    });
+  });
 });
