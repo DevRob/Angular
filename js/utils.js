@@ -1,5 +1,9 @@
-// ======================= DOM Utility Functions from PastryKit =============================== //
+/*
+  @NOTE - Based on: Intro to CSS 3D transforms by David DeSandro
+            https://desandro.github.io/3dtransforms
+*/
 
+// ======================= DOM Utility Functions from PastryKit =============================== //
 // Sure, we could use jQuery or XUI for these,
 // but these are concise and will work with plain vanilla JS
 
