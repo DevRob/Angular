@@ -25,6 +25,11 @@ $(document).ready(function(){
 
   $("li").click(function() {
     var clickedIndex = $("#carousel li").index( this );
+    var card = document.getElementById('card');
+    if ($(this).attr("data-increment") != 0) {
+      card.toggleClassName('flipped');
+      setTimeout(function(){ card.toggleClassName('flipped'); }, 800);
+    }
 
     theta += ( 360 / panelCount ) * $(this).attr("data-increment") * -1;
     carousel.style[ transformProp ] = 'translateZ( -288px ) rotateY(' + theta + 'deg)';
@@ -36,4 +41,12 @@ $(document).ready(function(){
       $(this).attr("data-increment", (index - clickedIndex + halfway).mod(panelCount) - halfway);
     });
   });
+
+  // $("li").mousedown(function() {
+  //   $(this).css("transform", "translateZ( 280px )");
+  // });
+  //
+  // $("li").mouseup(function() {
+  //   $(this).css("transform", "translateZ( 288px )");
+  // });
 });
