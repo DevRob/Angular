@@ -1,3 +1,8 @@
+/*
+  @NOTE - Based on: Intro to CSS 3D transforms by David DeSandro
+            https://desandro.github.io/3dtransforms
+*/
+
 .menu-container {
   width: 210px;
   height: 80px;
@@ -114,3 +119,57 @@
        -o-transform: rotateY( 324deg ) translateZ( 288px );
           transform: rotateY( 324deg ) translateZ( 288px );
 }
+/* --------------------------- page flip -------------------------------------*/
+.page-container {
+  position: relative;
+  -webkit-perspective: 800px;
+     -moz-perspective: 800px;
+       -o-perspective: 800px;
+          perspective: 800px;
+  }
+
+  #card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    -webkit-transition: -webkit-transform 1s;
+       -moz-transition: -moz-transform 1s;
+         -o-transition: -o-transform 1s;
+            transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+         -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform-origin: right center;
+       -moz-transform-origin: right center;
+         -o-transform-origin: right center;
+            transform-origin: right center;
+  }
+
+  #card.flipped {
+    -webkit-transform: translateX( -100% ) rotateY( -180deg );
+       -moz-transform: translateX( -100% ) rotateY( -180deg );
+         -o-transform: translateX( -100% ) rotateY( -180deg );
+            transform: translateX( -100% ) rotateY( -180deg );
+  }
+
+  #card figure {
+    background: white;
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+         -o-backface-visibility: hidden;
+            backface-visibility: hidden;
+  }
+
+  #card .back {
+    opacity: 0.5;
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    background: blue;
+    -webkit-transform: rotateY( 180deg );
+       -moz-transform: rotateY( 180deg );
+         -o-transform: rotateY( 180deg );
+            transform: rotateY( 180deg );
+  }
