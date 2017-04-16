@@ -27,8 +27,9 @@ $(document).ready(function(){
     var clickedIndex = $("#carousel li").index( this );
     var card = document.getElementById('card');
     if ($(this).attr("data-increment") != 0) {
-      card.toggleClassName('flipped');
-      setTimeout(function(){ card.toggleClassName('flipped'); }, 800);
+      $('.page-container').hide(500).fadeIn();
+      // card.toggleClassName('flipped');
+      // setTimeout(function(){ card.toggleClassName('flipped'); }, 800);
     }
 
     theta += ( 360 / panelCount ) * $(this).attr("data-increment") * -1;
