@@ -1,24 +1,30 @@
 var Data = function() {
+  this.bio = {
+      // Bio with name, role, contacts, picture welcome msg and skills
+      "name" : "Robert Molnar",
+      "role" : "Software Developer",
+      "contacts" : {
+      "mobile" : "+ 353 87 925 6846",
+      "email" : "mail.robertmolnar@gmail.com",
+      "github" : "DevRob",
+      "location" : "Limerick, Ireland",
+      },
+      "picture" : "images/portrait.jpg",
+      "skills" : ["Javascript", "HTML / CSS", "knockout.js", ".NET ( C# )", "Python", "MySQL", "Git"]
+  }
   this.pages = [
     {
-      "title": "home",
-      "description":  "This site nowhere near to finished. The content is a collection of completely random thoughts.",
+      "title": "welcome",
+      "description":  "Welcome to my portfolio site.",
       "contents": [
         {
           "header": "The idea.",
-          "article": "I will use this site as a portfolio for now, but it will always change and grow \
-          ( hopefully! ) as I pick up new techniques and technologies. The page is very simple, " +
-          "I list my skills and you can navigate to the part you are interested in. I try to infuse " +
-          " all these skills listed into this site and show some other cases I used them before.",
-          "images": [
-            "img/Asteroid2.png",
-            "img/Asteroid2.png"
-          ]
-        },
-        {
-          "header": "Status of this Project.",
-          "article": "I've just started this project and most of the content are just random toughts and images." +
-          "This page uses AngularJS to display the content of an array of objects",
+          "article": "Software Developer experienced with object-oriented and functional" +
+                          "programming languages. Working with server and client side applications" +
+                          "using HTML, CSS, Javascript, .NET, MySQL. Familiar with Responsive Web" +
+                          "Design techniques, Google Maps API, JQuery and data-binding with knockout.js." +
+                          "Highly value re-usable, maintainable, self-documenting code. Fast learner and" +
+                          "open to using new technologies and frameworks.",
           "images": [
             "img/Asteroid2.png",
             "img/Asteroid2.png"
@@ -27,16 +33,18 @@ var Data = function() {
       ]
     },
     {
-      "title": "JavaScript",
-      "description": "Here are some JavaScript skills listed",
+      "title": "projects",
+      "description": "Few of my projects in not particular order",
       "contents": [
        {
-         "header": "Object Oriented JavaScript",
-         "article": "Here we can discuss the details of the content.",
+         "header": "CSS 3D Transform",
+         "article": "Experimenting with 3D UI design. I did not find the benefit to filling out a swiveling web form," +
+                    "but it's fun to experiment with and a good coding challange.",
          "images": [
-           "http://media.gettyimages.com/photos/hammerhead-sharks-picture-id85410797",
-           "http://media.gettyimages.com/photos/hammerhead-shark-picture-id110957777"
-         ]
+           "img/3DTransform.png"
+         ],
+         "live_link": "http://devrob.github.io/3D-transforms/",
+         "source_code_link": "https://github.com/DevRob/3D-transforms"
        },
        {
          "header": "Weired but good stuff we like about JavaScript.",
