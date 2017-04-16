@@ -1,5 +1,9 @@
-// ======================= DOM Utility Functions from PastryKit =============================== //
+/*
+  @NOTE - Based on: Intro to CSS 3D transforms by David DeSandro
+            https://desandro.github.io/3dtransforms
+*/
 
+// ======================= DOM Utility Functions from PastryKit =============================== //
 // Sure, we could use jQuery or XUI for these,
 // but these are concise and will work with plain vanilla JS
 
@@ -61,7 +65,6 @@ DDD.EventHandler.prototype.handleEvent = function( event ) {
 /* ==================== RangeDisplay ==================== */
 
 // displays the value of a range input
-// why isn't this in the HTML5 spec?
 
 DDD.RangeDisplay = function ( range ) {
   this.range = range;
@@ -197,20 +200,15 @@ DDD.translate = Modernizr.csstransforms3d ?
     return 'translate(' + x + 'px, ' + y + 'px)';
   };
 
-
 /* ==================== Start Up ==================== */
 
-
 DDD.init = function() {
-
   var ranges = document.querySelectorAll('input[type="range"]'),
-      rangesLen = ranges.length,
-      i;
-
+      rangesLen = ranges.length;
   if ( rangesLen ) {
 
      // create range output display
-    for ( i=0; i < rangesLen; i++ ) {
+    for ( var i=0; i < rangesLen; i++ ) {
       new DDD.RangeDisplay( ranges[i] );
     }
 

@@ -4,26 +4,28 @@
     <meta charset="utf-8">
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link id="css" href="css/main.css" rel="stylesheet" />
+    <link id="css" href="css/3Dtransform.css" rel="stylesheet" />
     <script src="js/vendor/angular.min.js"></script>
     <title>Portfolio</title>
   </head>
   <body ng-app="portfolio">
     <div class="container">
       <div class="main controller" ng-controller="MainController">
-        <!--button type="button" name="button" onclick="swapCss()">Change CSS</button-->
         <div class="row">
-          <menu class="buttons">
-            <ul class='menu-container'>
+          <menu class="menu-container">
+            <ul id="carousel">
               <li class="tab-btn" ng-repeat="page in pages" ng-click="showPage($index)"> {{ page.title }} </li>
             </ul>
           </menu>
         </div>
         <div class="row">
           <section class="page-container">
+            <div id="card" class="">
               <pages info="actualPage"></pages>
               <article class="contents" ng-repeat="content in actualPage.contents">
                 <page-content content="content"></page-content>
               </article>
+            </div>
           </section>
         </div>
       </div>
@@ -38,5 +40,6 @@
     <script src="js/controllers/MainController.js"></script>
     <!-- Directives -->
     <script src="js/directives/directives.js"></script>
+    <script src="js/utils.js"></script>
   </body>
 </html>

@@ -1,0 +1,121 @@
+/*
+  @NOTE - Based on: Intro to CSS 3D transforms by David DeSandro
+            https://desandro.github.io/3dtransforms
+*/
+
+.menu-container {
+  width: 210px;
+  height: 80px;
+  position: relative;
+  margin: auto;;
+  border: 1px solid red;
+  -webkit-perspective: 1100px;
+     -moz-perspective: 1100px;
+       -o-perspective: 1100px;
+          perspective: 1100px;
+}
+
+#carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform: translateZ( -288px ) rotateY(0deg);
+     -moz-transform: translateZ( -288px ) rotateY(0deg);
+       -o-transform: translateZ( -288px ) rotateY(0deg);
+          transform: translateZ( -288px ) rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+       -o-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+     -moz-transition: -moz-transform 1s;
+       -o-transition: -o-transform 1s;
+          transition: transform 1s;
+}
+
+#carousel li {
+  display: block;
+  position: absolute;
+  width: 170px;
+  /*height: 116px;*/
+  left: 10px;
+  top: 10px;
+  /*line-height: 116px;*/
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+#carousel li:nth-child(1) { background: hsla( 240, 100%, 50%, 0.8 ); }
+#carousel li:nth-child(2) { background: hsla( 240, 100%, 50%, 0.8 ); }
+#carousel li:nth-child(3) { background: hsla( 240, 100%, 50%, 0.8 ); }
+#carousel li:nth-child(4) { background: hsla( 240, 100%, 50%, 0.8 ); }
+#carousel li:nth-child(5) { background: hsla( 240, 100%, 50%, 0.8 ); }
+#carousel li:nth-child(6) { background: hsla( 240, 100%, 50%, 0.8 ); }
+#carousel li:nth-child(7) { background: hsla( 240, 100%, 50%, 0.8 ); }
+#carousel li:nth-child(8) { background: hsla( 240, 100%, 50%, 0.8 ); }
+#carousel li:nth-child(9) { background: hsla( 240, 100%, 50%, 0.8 ); }
+#carousel li:nth-child(10) { background: hsla( 240, 100%, 50%, 0.8 ); }
+
+#carousel li:nth-child(1) {
+  -webkit-transform: rotateY(   0deg ) translateZ( 288px );
+     -moz-transform: rotateY(   0deg ) translateZ( 288px );
+       -o-transform: rotateY(   0deg ) translateZ( 288px );
+          transform: rotateY(   0deg ) translateZ( 288px );
+}
+#carousel li:nth-child(2) {
+  -webkit-transform: rotateY(  36deg ) translateZ( 288px );
+     -moz-transform: rotateY(  36deg ) translateZ( 288px );
+       -o-transform: rotateY(  36deg ) translateZ( 288px );
+          transform: rotateY(  36deg ) translateZ( 288px );
+}
+#carousel li:nth-child(3) {
+  -webkit-transform: rotateY(  72deg ) translateZ( 288px );
+     -moz-transform: rotateY(  72deg ) translateZ( 288px );
+       -o-transform: rotateY(  72deg ) translateZ( 288px );
+          transform: rotateY(  72deg ) translateZ( 288px );
+}
+#carousel li:nth-child(4) {
+  -webkit-transform: rotateY( 108deg ) translateZ( 288px );
+     -moz-transform: rotateY( 108deg ) translateZ( 288px );
+       -o-transform: rotateY( 108deg ) translateZ( 288px );
+          transform: rotateY( 108deg ) translateZ( 288px );
+}
+#carousel li:nth-child(5) {
+  -webkit-transform: rotateY( 144deg ) translateZ( 288px );
+     -moz-transform: rotateY( 144deg ) translateZ( 288px );
+       -o-transform: rotateY( 144deg ) translateZ( 288px );
+          transform: rotateY( 144deg ) translateZ( 288px );
+}
+#carousel li:nth-child(6) {
+  -webkit-transform: rotateY( 180deg ) translateZ( 288px );
+     -moz-transform: rotateY( 180deg ) translateZ( 288px );
+       -o-transform: rotateY( 180deg ) translateZ( 288px );
+          transform: rotateY( 180deg ) translateZ( 288px );
+}
+#carousel li:nth-child(7) {
+  -webkit-transform: rotateY( 216deg ) translateZ( 288px );
+     -moz-transform: rotateY( 216deg ) translateZ( 288px );
+       -o-transform: rotateY( 216deg ) translateZ( 288px );
+          transform: rotateY( 216deg ) translateZ( 288px );
+}
+#carousel li:nth-child(8) {
+  -webkit-transform: rotateY( 252deg ) translateZ( 288px );
+     -moz-transform: rotateY( 252deg ) translateZ( 288px );
+       -o-transform: rotateY( 252deg ) translateZ( 288px );
+          transform: rotateY( 252deg ) translateZ( 288px );
+}
+#carousel li:nth-child(9) {
+  -webkit-transform: rotateY( 288deg ) translateZ( 288px );
+     -moz-transform: rotateY( 288deg ) translateZ( 288px );
+       -o-transform: rotateY( 288deg ) translateZ( 288px );
+          transform: rotateY( 288deg ) translateZ( 288px );
+}
+#carousel li:nth-child(10) {
+  -webkit-transform: rotateY( 324deg ) translateZ( 288px );
+     -moz-transform: rotateY( 324deg ) translateZ( 288px );
+       -o-transform: rotateY( 324deg ) translateZ( 288px );
+          transform: rotateY( 324deg ) translateZ( 288px );
+}

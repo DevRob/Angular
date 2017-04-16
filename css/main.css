@@ -7,37 +7,23 @@ body {
   color: var(--main-text-color);
 }
 
-.buttons {
-  padding-top: 20px;
-}
-
 ul {
   margin: auto;
 }
 
-.buttons {
-  float:right;
-  position:relative;
-  left:-50%;
-  text-align:left;
+menu {
+  padding: 0;
 }
 
-.menu-container {
-  list-style:none;
-  position:relative;
-  left:50%;
+.buttons {
+  padding-top: 20px;
 }
 
 .menu-container li {
   float:left;
   position:relative;
-}
-
-.menu-container li {
   list-style-type: none;
-  display: inline-flex;
-  padding: 10px;
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px;
   border-bottom: 1px solid var(--main-color);
   cursor: pointer;
   user-select: none;
