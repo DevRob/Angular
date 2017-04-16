@@ -27,7 +27,7 @@ $(document).ready(function(){
     var clickedIndex = $("#carousel li").index( this );
     var card = document.getElementById('card');
     if ($(this).attr("data-increment") != 0) {
-      $('.page-container').hide(500).fadeIn();
+      $('.page-container').fadeIn(500);
       // card.toggleClassName('flipped');
       // setTimeout(function(){ card.toggleClassName('flipped'); }, 800);
     }
